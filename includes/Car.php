@@ -42,6 +42,8 @@ class Car {
 	}
 
 	public function getInfo() {
+		// detta är tre olika sätt att göra samma sak på
+
 		return "Jag är en " . $this->manufacturer . " " . $this->model . " av årsmodell " . $this->year . " med registreringsnummer " . $this->registrationNumber . ".";
 
 		return "Jag är en {$this->manufacturer} {$this->model} av årsmodell {$this->year} med registreringsnummer {$this->registrationNumber}.";
