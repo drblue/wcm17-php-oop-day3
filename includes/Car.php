@@ -6,7 +6,7 @@ class Car {
 	protected $year;
 	protected $registrationNumber;
 
-	public function __construct($manufacturer, $model, $year, $registrationNumber) {
+	public function __construct($manufacturer, $model, $year = 2018, $registrationNumber = "N/A") {
 		$this->manufacturer = $manufacturer;
 		$this->model = $model;
 		$this->year = $year;
@@ -43,5 +43,9 @@ class Car {
 
 	public function getInfo() {
 		return "Jag är en " . $this->manufacturer . " " . $this->model . " av årsmodell " . $this->year . " med registreringsnummer " . $this->registrationNumber . ".";
+
+		return "Jag är en {$this->manufacturer} {$this->model} av årsmodell {$this->year} med registreringsnummer {$this->registrationNumber}.";
+
+		return sprintf("Jag är en %s %s av årsmodell %s med registreringsnummer %s.", $this->manufacturer, $this->model, $this->year, $this->registrationNumber);
 	}
 }
