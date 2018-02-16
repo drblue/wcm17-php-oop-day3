@@ -5,34 +5,18 @@ class Car {
 	protected $model;
 	protected $year;
 	protected $registrationNumber;
-	protected $color;
+	protected $mileage;
 
-	public function __construct($manufacturer, $model, $color, $year = 2018, $registrationNumber = "N/A") {
+	public function __construct($manufacturer, $model, $year = 2018, $registrationNumber = "N/A", $mileage = 0) {
 		$this->manufacturer = $manufacturer;
 		$this->model = $model;
-		$this->color = $color;
 		$this->year = $year;
 		$this->registrationNumber = $registrationNumber;
+		$this->mileage = $mileage;
 	}
 
-	public function isRed() {
-		if ($this->color === "Röd") {
-			return true;
-		} else {
-			return false;
-		}
-
-		return $this->color === "Röd";
-	}
-
-	public function hasRegistrationNumber() {
-		if ($this->registrationNumber !== "N/A") {
-			return true;
-		} else {
-			return false;
-		}
-
-		return $this->registrationNumber !== "N/A";
+	public function getMileage() {
+		return $this->mileage;
 	}
 
 	public function getManufacturer() {
